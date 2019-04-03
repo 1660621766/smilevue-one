@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import {Button ,Row ,Col ,Lazyload ,Swipe, SwipeItem} from 'vant'
 
 Vue.config.productionTip = false
 
+Vue.use(Button).use(Row).use(Col).use(Lazyload).use(Swipe).use(SwipeItem)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
