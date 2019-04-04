@@ -50,7 +50,7 @@
       </div>
     </div>
     <!-- 楼层模块 -->
-    <floor-components></floor-components>
+    <floor-components :floor1="floor1"></floor-components>
   </div>
     
 </template>
@@ -69,7 +69,11 @@ export default {
       swiperImg:[],
       category:[],
       testLogo:'',
-      recommendGoods:[]
+      recommendGoods:[],
+      floor1:[],
+      floor1_0:{},
+      floor1_1:{},
+      floor1_2:{},
     }
   },
   components: {
@@ -85,6 +89,10 @@ export default {
         this.category = res.data.data.category;
         this.testLogo=res.data.data.advertesPicture.PICTURE_ADDRESS;
         this.recommendGoods = res.data.data.recommend;
+        this.floor1=res.data.data.floor1;
+        // this.floor1_0=this.floor1[0];
+        // this.floor1_1=this.floor1[1];
+        // this.floor1_2=this.floor1[2];
       }
       
     })
